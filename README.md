@@ -1,0 +1,4 @@
+# MongoDB Aggregation Error: Handling Null and Non-Numeric Values
+This repository demonstrates a common error in MongoDB aggregation pipelines and provides a solution. The error occurs when aggregating data with fields that contain null values or non-numeric values when a numeric operation is expected. This leads to incorrect results such as incorrect averages or counts.
+## Bug Description
+The `$avg` operator in the aggregation pipeline skips null values; `$sum` does not complain about non-numeric values, but the calculation may be wrong.  This can result in inaccurate results when processing data with inconsistent data types.
